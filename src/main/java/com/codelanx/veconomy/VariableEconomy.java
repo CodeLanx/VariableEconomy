@@ -1,6 +1,7 @@
 package com.codelanx.veconomy;
 
 import com.codelanx.codelanxlib.econ.CEconomy;
+import com.codelanx.codelanxlib.listener.ListenerManager;
 import com.codelanx.codelanxlib.logging.Logging;
 import com.codelanx.veconomy.data.DataFacade;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -23,11 +24,12 @@ public class VariableEconomy extends JavaPlugin {
             this.getServer().getPluginManager().disablePlugin(this);
             return;
         }
-
+        ListenerManager.registerListener(new ItemChangeListener(this));
         this.econ = new CEconomy(this);
-        this.econ.addObserver((eco, packet) -> {
+    }
 
-        });
+    public DataFacade getData() {
+        return this.data;
     }
 
 }
