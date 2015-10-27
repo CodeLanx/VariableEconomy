@@ -7,7 +7,7 @@
     <groupId>com.codelanx</groupId>
     <artifactId>veconomy</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <description>something something dark side</description>
+    <description>Caches known items in exchange with players on the server to create a self-balancing, dynamic economy — Edit</description>
 
     <properties>
         <prefix>VEconomy</prefix>
